@@ -24,3 +24,11 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     }
     
 }
+
+class SafariExtensionHandler: SFSafariExtensionHandler {
+    override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
+        if messageName == "blockVerifiedUsers" {
+            page.dispatchMessageToScript(withName: "blockVerifiedUsers", userInfo: nil)
+        }
+    }
+}
