@@ -1,10 +1,3 @@
-//
-//  SafariWebExtensionHandler.swift
-//  BlueBlocked Extension
-//
-//  Created by Lindsey Thornton on 4/21/23.
-//
-
 import SafariServices
 import os.log
 
